@@ -16,7 +16,7 @@ const EditStudent = () => {
 
   async function fetchSingleStudent() {
     try {
-      const res = await axios.get(`http://localhost:3000/students/${id}`)
+      const res = await API.get(`/students/${id}`)
 
       setStudent(res.data)
 
