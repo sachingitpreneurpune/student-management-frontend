@@ -26,7 +26,7 @@ const StudentList = () => {
 
     if (confirmDelete) {
       try {
-        await axios.delete(`http://localhost:3000/students/${id}`)
+        await API.delete(`/students/${id}`)
 
         fetchStudents()
 
@@ -39,7 +39,7 @@ const StudentList = () => {
   async function handlePatch(id) {
 
     try {
-      await axios.patch(`http://localhost:3000/students/${id}`, {
+      await API.patch(`/students/${id}`, {
         course: 'Updated Course'
       })
 
